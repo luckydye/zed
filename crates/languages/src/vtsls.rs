@@ -215,8 +215,15 @@ impl LspAdapter for VtslsLspAdapter {
                 "format": {
                     "enable": true
                 },
-                "inlayHints": {
-                    "parameterNames": {
+                "preferences": {
+                  "importModuleSpecifier": "non-relative",
+                  "autoImportFileExcludePatterns": [
+                    ".nuxt/*"
+                  ]
+                },
+                "inlayHints":{
+                    "parameterNames":
+                    {
                         "enabled": "all",
                         "suppressWhenArgumentMatchesName": false,
                     },

@@ -384,6 +384,8 @@ pub enum FormatOnSave {
     Off,
     /// Files should be formatted using the current language server.
     LanguageServer,
+    /// Format code using a specific language server.
+    LanguageServerName(Arc<str>),
     /// The external program to use to format the files on save.
     External {
         /// The external program to run.
@@ -424,6 +426,8 @@ pub enum Formatter {
     Auto,
     /// Format code using the current language server.
     LanguageServer,
+    /// Format code using a specific language server.
+    LanguageServerName(Arc<str>),
     /// Format code using Zed's Prettier integration.
     Prettier,
     /// Format code using an external command.
